@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mako Signals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 bg-gray-800">
+    <h1 class="text-2xl font-bold">Mako Signals</h1>
+    <div class="space-x-6">
+      <a href="#" class="hover:text-yellow-400">How It Works</a>
+      <a href="#" class="hover:text-yellow-400">Performance</a>
+      <a href="#" class="hover:text-yellow-400">Testimonials</a>
+      <a href="#" class="hover:text-yellow-400">FAQ</a>
+      <button class="bg-yellow-500 text-black px-4 py-2 rounded">Subscribe</button>
+    </div>
+  </nav>
+
+  <!-- Performance Comparison -->
+  <section class="p-8">
+    <h2 class="text-xl font-bold mb-4">Performance Comparison</h2>
+    <canvas id="performanceChart" class="bg-white rounded"></canvas>
+  </section>
+
+  <!-- Stats -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 text-center">
+    <div class="bg-gray-800 p-6 rounded">Signal Return Rate <br><span class="text-green-400 text-2xl font-bold">+230%</span></div>
+    <div class="bg-gray-800 p-6 rounded">Bitcoin Alone <br><span class="text-yellow-400 text-2xl font-bold">+120%</span></div>
+    <div class="bg-gray-800 p-6 rounded">Confidence Level <br><span class="text-blue-400 text-2xl font-bold">+110%</span></div>
+  </section>
+
+  <!-- Features -->
+  <section class="p-8">
+    <h2 class="text-xl font-bold mb-4 text-center">Mr. 100's Trading Intelligence, Powered by AI</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 p-4 rounded">No Account Linking</div>
+      <div class="bg-gray-800 p-4 rounded">Real-time Alerts</div>
+      <div class="bg-gray-800 p-4 rounded">Mobile Notifications</div>
+      <div class="bg-gray-800 p-4 rounded">Privacy Focused</div>
+      <div class="bg-gray-800 p-4 rounded">Affordable Pricing</div>
+      <div class="bg-gray-800 p-4 rounded">Mr.100 Inspired</div>
+    </div>
+  </section>
+
+  <!-- Who Was Mr.100 -->
+  <section class="p-8 bg-gray-800 text-center">
+    <h2 class="text-xl font-bold mb-2">Who Was Mr. 100?</h2>
+    <p class="text-gray-400">A legendary Bitcoin trader whose wallet moves shook the markets. Now, our AI decodes his behavior to deliver signals to you.</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="p-8 text-center">
+    <h2 class="text-xl font-bold mb-4">Traders Love Our Signals</h2>
+    <blockquote class="italic text-gray-400 max-w-xl mx-auto">“I was skeptical at first. But after 2 months of using Mako Signals, my portfolio grew by 21%. These signals are something else!” – Mark, US</blockquote>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-8 text-center">
+    <h2 class="text-lg font-bold mb-2">Join hundreds of traders already using Mako Signals</h2>
+    <button class="bg-yellow-500 text-black px-6 py-3 mt-4 rounded">Get Started Today</button>
+  </section>
+
+  <script>
+    const ctx = document.getElementById('performanceChart');
+    const performanceChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [
+          {
+            label: 'Mako Signals',
+            data: [100, 130, 160, 200, 250, 330],
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Bitcoin',
+            data: [100, 120, 125, 140, 180, 220],
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: false
+          }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+</html>
